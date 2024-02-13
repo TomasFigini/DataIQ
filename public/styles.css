@@ -1,0 +1,73 @@
+/* Estilos para la barra de búsqueda */
+.search-box {
+  width: 90%; /* Ancho relativo */
+  max-width: 400px; /* Ancho máximo */
+  margin: 20px auto; /* Centralizar y agregar espacio */
+}
+
+/* Estilos para el input de búsqueda */
+.search-box input[type='text'] {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+/* Estilos para el input de búsqueda cuando está enfocado */
+.search-box input[type='text']:focus {
+  border-color: #007bff;
+}
+
+/* Estilos para el contenedor de usuarios */
+.users-container {
+  width: 90%; /* Ancho relativo */
+  max-width: 800px; /* Ancho máximo */
+  margin: 20px auto; /* Centralizar verticalmente y agregar espacio */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Estilos para cada usuario */
+.user {
+  width: calc(33.33% - 20px); /* Tamaño relativo */
+  margin: 10px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9; /* Color de fondo gris */
+}
+
+/* Estilos para hacer que el contenedor de usuarios sea más grande al agrandar la pantalla */
+@media (min-width: 768px) {
+  .users-container {
+    width: 95%; /* Ajustar el ancho según el tamaño de la pantalla */
+  }
+}
+
+/* Estilos para hacer que el contenedor de usuarios sea más pequeño al achicar la pantalla */
+@media (max-width: 480px) {
+  .users-container {
+    width: 85%; /* Ajustar el ancho según el tamaño de la pantalla */
+  }
+}
+
+/* Estilos para hacer que los usuarios sean responsive */
+@media (max-width: 768px) {
+  .user {
+    width: calc(
+      50% - 20px
+    ); /* Cambiar tamaño de los usuarios en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .user {
+    width: calc(
+      100% - 20px
+    ); /* Cambiar tamaño de los usuarios en pantallas muy pequeñas */
+  }
+}
